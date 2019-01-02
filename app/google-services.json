@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "42558520704",
+    "firebase_url": "https://engineerreligion.firebaseio.com",
+    "project_id": "engineerreligion",
+    "storage_bucket": "engineerreligion.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:42558520704:android:13521ae6a7d2eca3",
+        "android_client_info": {
+          "package_name": "com.matcha.kay.engineerreligion"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "42558520704-0lfvvs8uob57ert1ou0lda0hddmovr4p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvLaqRzgLG3kC26_IO6oyTbqqDqdIorvQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

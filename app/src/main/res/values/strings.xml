@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">EngineerReligion</string>
+    <string name="app_name">ナウジニア</string>
+    <string name="post_btn">投稿</string>
+    <string name="post_hint">メッセージを入力50文字以内</string>
 </resources>

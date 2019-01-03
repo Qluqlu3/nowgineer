@@ -16,6 +16,7 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -41,20 +42,27 @@ public class MainActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FirebaseDatabase database = FirebaseDatabase.getInstance();
-                DatabaseReference myRef = database.getReference("er");
-                Comment comment= new Comment();
-                comment.setComment(et.getText().toString());
-                Date date = new Date();
-                SimpleDateFormat sdf = new SimpleDateFormat("yyyy年MM月dd日HH時mm分");
-                String time = sdf.format(date);
-                comment.setTime(time);
-                sdf = new SimpleDateFormat("yyyyMMddHHmmss");
-                long order = Long.parseLong(sdf.format(date));
-                order = - order;
-                comment.setOrder(order);
-                myRef.push().setValue(comment);
-                et.setText("");
+                if(et.getText().toString().equals("")) {
+                    Toast.makeText(MainActivity.this, "メッセージを入力してください", Toast.LENGTH_LONG).show();
+                }
+                else {
+                    FirebaseDatabase database = FirebaseDatabase.getInstance();
+                    DatabaseReference myRef = database.getReference("er");
+                    Comment comment= new Comment();
+                    comment.setComment(et.getText().toString());
+                    Date date = new Date();
+                    SimpleDateFormat sdf = new SimpleDateFormat("yyyy年MM月dd日HH時mm分");
+                    String time = sdf.format(date);
+                    comment.setTime(time);
+                    sdf = new SimpleDateFormat("yyyyMMddHHmmss");
+                    long order = Long.parseLong(sdf.format(date));
+                    order = - order;
+                    comment.setOrder(order);
+                    myRef.push().setValue(comment);
+                    et.setText("");
+
+                    Toast.makeText(MainActivity.this, "投稿完了", Toast.LENGTH_LONG).show();
+                }
             }
         });
 

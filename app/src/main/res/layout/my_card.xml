@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
+    android:background="#ddd"
     xmlns:app="http://schemas.android.com/tools">
 
     <android.support.v7.widget.CardView
@@ -13,14 +14,14 @@
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
         android:layout_marginTop="13dp"
-        card_view:cardCornerRadius="7dp"
+        card_view:cardCornerRadius="8dp"
         app:cardUseCompatPadding="true">
 
         <LinearLayout
             android:id="@+id/cardLinear"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#2212B27B"
+            android:background="#12B27B"
             android:orientation="vertical">
 
             <TextView
